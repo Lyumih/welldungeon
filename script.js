@@ -10,10 +10,12 @@ let buttonsWords = ['Исследовать уровень', 'Продолжит
 function run() {
     console.log("Скрипт запущен")
     let timerId = setInterval(() => {
-        let keyboard = document.querySelector('.Keyboard__container')
         console.log("Работает скрипт!")
-        let buttons = keyboard.getElementsByTagName('button')
-        if (buttons) clickButton(buttons[0])
+        let keyboard = document.querySelector('.Keyboard__container')
+        if (keyboard) {
+            let buttons = keyboard.getElementsByTagName('button')
+            if (buttons) clickButton(buttons[0])
+        }
         else console.log("Нечего нажимать")
     }, secondTimeout * 1000)
 }
